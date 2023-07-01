@@ -1,0 +1,7 @@
+nbdev
+numpy
+gtts
+openai
+tiktoken
+whisper
+reinautils

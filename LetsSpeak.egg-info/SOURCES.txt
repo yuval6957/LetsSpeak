@@ -1,0 +1,15 @@
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+LetsSpeak/__init__.py
+LetsSpeak/_modidx.py
+LetsSpeak/core.py
+LetsSpeak.egg-info/PKG-INFO
+LetsSpeak.egg-info/SOURCES.txt
+LetsSpeak.egg-info/dependency_links.txt
+LetsSpeak.egg-info/entry_points.txt
+LetsSpeak.egg-info/not-zip-safe
+LetsSpeak.egg-info/requires.txt
+LetsSpeak.egg-info/top_level.txt

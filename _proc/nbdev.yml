@@ -1,0 +1,9 @@
+project:
+  output-dir: _docs
+
+website:
+  title: "LetsSpeak"
+  site-url: "https://yuval6957.github.io/LetsSpeak"
+  description: "Speaking with ChatGPT"
+  repo-branch: main
+  repo-url: "https://github.com/yuval6957/LetsSpeak"
