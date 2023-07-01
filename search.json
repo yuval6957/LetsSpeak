@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "core.html",
+    "href": "core.html",
+    "title": "core",
+    "section": "",
+    "text": "if os.path.isfile(\"/home/notebooks/LetsSpeak/tokens.json\"):\n    params = Parameters().from_json(\"/home/notebooks/LetsSpeak/tokens.json\")\n    os.environ[\"OPENAI_API_KEY\"] = params.tokens.openai.research\nopenai.api_key = os.getenv(\"OPENAI_API_KEY\")\n\n\nsource\n\nTextToSpeech\n\n TextToSpeech (lang='en')\n\nsummary: Text to speech using Google’s TTS.\n\nsource\n\n\nSpeechToText\n\n SpeechToText ()\n\nsummary: Speech to text using huggingface’s wav2vec2 model.\n\nstt = SpeechToText()\ntts = TextToSpeech()\n\n\nprint(stt(\"/home/hd/LetsSpeak/What-is-the-meaning-of-life.mp3\"))\n\n What is the meaning of life?\n\n\n\ntts(text=\"The meaning of life is 42\", file = \"/home/hd/LetsSpeak/the_meaning_of_life.mp3\")\n\n'/home/hd/LetsSpeak/the_meaning_of_life.mp3'\n\n\n\nsource\n\n\nget_embedding\n\n get_embedding (text, model='text-embedding-ada-002',\n                return_num_tokens=False)\n\n/opt/hostedtoolcache/Python/3.9.17/x64/lib/python3.9/site-packages/fastcore/docscrape.py:225: UserWarning: Unknown section Attributes\n  else: warn(msg)\n/opt/hostedtoolcache/Python/3.9.17/x64/lib/python3.9/site-packages/fastcore/docscrape.py:225: UserWarning: Unknown section Methods\n  else: warn(msg)\n\nsource\n\n\nContextPool\n\n ContextPool (file_name=None, model='text-embedding-ada-002')\n\nA class used to store and retrieve text and their corresponding embeddings.\n…\n\nsource\n\n\nCreateContext\n\n CreateContext (context_pool, general_prompt=None, context_prompt=None,\n                request_prompt=None, last_n=2, max_contexts_tokens=512,\n                threshold=0.5, too_close_threshold=0.95)\n\nThis class is responsible for assembling the full context text from the context pool and the request text.\nAttributes: context_pool (ContextPool): A ContextPool object that stores contexts and their embeddings. general_prompt (str): General prompt text that starts the assembled text. context_prompt (str): Context prompt text that introduces the contexts. request_prompt (str): Request prompt text that introduces the request. max_contexts_tokens (int): Maximum number of tokens that contexts can have in total.\n\nsource\n\n\nget_response\n\n get_response (request, create_context, model='gpt-3.5-turbo', n=5,\n               debug=False)\n\nGet the response to the given request using the given context pool and model.\n\nsource\n\n\nchat\n\n chat (create_context, context_pool, model='gpt-3.5-turbo', n=5,\n       debug=False, auto_save=True)\n\nChat with the given context pool and model.\n\ncontext_pool = ContextPool(\"/home/hd/LetsSpeak/context_pool.pkl\")\nlen(context_pool)\n\n6\n\n\n\ncreate_context = CreateContext(context_pool)\n\n\nchat(create_context, context_pool)\n\n[0.7537108  0.74636528 0.67878342 0.79604557 0.74621879 0.73172237]\nResponse: Congratulations on launching your podcast, \"Nadav is Talking\"! Since this is your first show, you can modify the greeting to suit the occasion. Here are a few alternative phrases you can use instead of \"welcome back\":\n\n1. \"Welcome to the debut episode of 'Nadav is Talking'!\"\n2. \"Hello and welcome to the premiere of 'Nadav is Talking'!\"\n3. \"Thank you for tuning in to the very first episode of 'Nadav is Talking'!\"\n4. \"Welcome, everyone, to the exciting beginning of 'Nadav is Talking'!\"\n5. \"It's great to have you join us for the inaugural episode of 'Nadav is Talking'!\"\n\nFeel free to choose the phrase that resonates with you the most and suits the tone you want to set for your podcast. Best of luck with your first show, and may it be the start of a successful podcasting journey!\n\n\n\ncontext_pool.save()"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "LetsSpeak",
+    "section": "",
+    "text": "This file will become your README and also the index of your documentation."
+  },
+  {
+    "objectID": "index.html#install",
+    "href": "index.html#install",
+    "title": "LetsSpeak",
+    "section": "Install",
+    "text": "Install\npip install LetsSpeak"
+  },
+  {
+    "objectID": "index.html#how-to-use",
+    "href": "index.html#how-to-use",
+    "title": "LetsSpeak",
+    "section": "How to use",
+    "text": "How to use\nFill me in please! Don’t forget code examples:\n\n1+1\n\n2"
+  }
+]
